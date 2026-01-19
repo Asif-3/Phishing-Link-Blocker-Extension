@@ -11,7 +11,7 @@ A browser extension designed to detect and block phishing links, helping users s
 - 🛡️ Improves online security and awareness
 
 ## 📂 Project Structure
-'''
+```
 Phishing-Link-Blocker-Extension/
 ├── extension/
 │ ├── manifest.json
@@ -23,7 +23,7 @@ Phishing-Link-Blocker-Extension/
 ├── backend/
 │ └── server.py
 ├── README.md
-'''
+```
 ## 🚀 Installation Steps
 
 1. Clone the repository:
