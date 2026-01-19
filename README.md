@@ -27,41 +27,42 @@ Phishing-Link-Blocker-Extension/
 ## 🚀 Installation Steps
 
 ### 1️⃣ Clone the Repository
-
+```
 git clone https://github.com/Asif-3/Phishing-Link-Blocker-Extension.git  
 cd Phishing-Link-Blocker-Extension  
-
+```
 ---
 
 ### 2️⃣ Set Up Flask Backend
 
 Navigate to the backend folder:
-
+```
 cd backend  
-
+```
 Create a virtual environment (recommended):
-
+```
 python -m venv venv  
-
+```
 Activate the virtual environment:
-
+```
 Windows:
 venv\Scripts\activate  
 
 Linux / macOS:
 source venv/bin/activate  
-
+```
 Install required dependencies:
+```
+pip install -r requirements.txt
 
-pip install flask  
-
+```
 Run the Flask server:
-
+```
 python server.py  
 
 The backend will start running at:
 http://127.0.0.1:5000/
-
+````
 ---
 
 ### 3️⃣ Load Browser Extension
