@@ -17,11 +17,9 @@ Phishing-Link-Blocker-Extension/
 │ ├── manifest.json
 │ ├── background.js
 │ ├── content.js
-│ ├── popup.html
-│ ├── popup.js
-│ └── style.css
+│ └── blocked.html
 ├── backend/
-│ └── server.py
+│ └── app.py
 ├── README.md
 ```
 ## 🚀 Installation Steps
@@ -58,7 +56,7 @@ pip install -r requirements.txt
 ```
 Run the Flask server:
 ```
-python server.py  
+python app.py  
 
 The backend will start running at:
 http://127.0.0.1:5000/
