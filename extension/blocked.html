@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Alert - Access Blocked</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      background: rgba(30, 30, 45, 0.95);
+      border: 1px solid rgba(255, 70, 70, 0.3);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(255, 70, 70, 0.15);
+      animation: slideIn 0.4s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shield-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+
+    .shield-icon svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 4px 12px rgba(255, 70, 70, 0.4));
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    h1 {
+      color: #ff4646;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .threat-level {
+      display: inline-block;
+      background: rgba(255, 70, 70, 0.2);
+      color: #ff6b6b;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 70, 70, 0.4);
+    }
+
+    .message {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      color: #c0c0c0;
+    }
+
+    .details {
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 3px solid #ff4646;
+      padding: 16px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+
+    .details-title {
+      color: #ff6b6b;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .details-list {
+      list-style: none;
+      font-size: 14px;
+      color: #b0b0b0;
+    }
+
+    .details-list li {
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .details-list li:before {
+      content: "▸";
+      color: #ff4646;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      color: #888;
+    }
+
+    .timestamp {
+      font-family: 'Courier New', monospace;
+      color: #666;
+      font-size: 11px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="shield-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 6V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V6L12 2Z" 
+              stroke="#ff4646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255, 70, 70, 0.1)"/>
+        <path d="M9 12L11 14L15 10" stroke="#ff4646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>⚠ Security Alert</h1>
+    <div class="threat-level">High Risk Detected</div>
+
+    <p class="message">
+      <strong>Access to this resource has been blocked by our security system.</strong>
+    </p>
+    <p class="message">
+      The requested URL has been identified as a potential phishing site designed to steal sensitive information such as passwords, financial data, or personal credentials.
+    </p>
+
+    <div class="details">
+      <div class="details-title">Threat Classification</div>
+      <ul class="details-list">
+        <li>Category: Phishing / Social Engineering</li>
+        <li>Risk Level: Critical</li>
+        <li>Action Taken: Connection Terminated</li>
+        <li>Protected Assets: User Credentials & Personal Data</li>
+      </ul>
+    </div>
+
+    <p class="message">
+      This protection measure has been automatically deployed to safeguard your system and prevent unauthorized data exfiltration.
+    </p>
+
+    <div class="footer">
+      If you believe this is a false positive, please contact your system administrator or security team for further investigation.
+      <div class="timestamp">
+        Timestamp: <span id="timestamp"></span> UTC
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const now = new Date();
+    const timestamp = now.toISOString().replace('T', ' ').substring(0, 19);
+    document.getElementById('timestamp').textContent = timestamp;
+  </script>
+</body>
+</html>

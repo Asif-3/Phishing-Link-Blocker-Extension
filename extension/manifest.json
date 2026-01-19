@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Asif-Phishing Link Detector",
+  "version": "1.0",
+  "description": "Detects phishing links using Flask backend",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
