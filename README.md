@@ -14,16 +14,15 @@ A browser extension designed to detect and block phishing links, helping users s
 
 Phishing-Link-Blocker-Extension/
 ├── extension/
-│   ├── manifest.json
-│   ├── background.js
-│   ├── content.js
-│   ├── popup.html
-│   ├── popup.js
-│   └── style.css
+│ ├── manifest.json
+│ ├── background.js
+│ ├── content.js
+│ ├── popup.html
+│ ├── popup.js
+│ └── style.css
 ├── backend/
-│   └── server.py
+│ └── server.py
 ├── README.md
-
 ## 🚀 Installation Steps
 
 1. Clone the repository:
