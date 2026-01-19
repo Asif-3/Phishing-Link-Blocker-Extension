@@ -26,9 +26,36 @@ Phishing-Link-Blocker-Extension/
 ```
 ## 🚀 Installation Steps
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Asif-3/Phishing-Link-Blocker-Extension.git
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Asif-3/Phishing-Link-Blocker-Extension.git
+cd Phishing-Link-Blocker-Extension
+2️⃣ Set Up Flask Backend
+Navigate to the backend folder:
+
+cd backend
+Create a virtual environment (recommended):
+
+python -m venv venv
+Activate the virtual environment:
+
+Windows
+
+venv\Scripts\activate
+Linux / macOS
+
+source venv/bin/activate
+Install required dependencies:
+
+pip install flask
+Run the Flask server:
+
+python server.py
+The backend will start running on:
+
+http://127.0.0.1:5000/
+
+3️⃣ Load Browser Extension
 Open your browser and go to:
 
 Chrome / Edge / Brave: chrome://extensions/
@@ -40,29 +67,37 @@ Click Load unpacked
 Select the extension folder
 
 The extension will appear in the browser toolbar
-
+```
 ⚙️ How It Works
-The extension monitors clicked or loaded URLs
+The browser extension monitors clicked or loaded URLs
 
-URLs are checked against phishing patterns or backend logic
+URLs are sent to the Flask backend for analysis
 
-If a threat is detected, the link is blocked or a warning is shown
+The backend checks for phishing patterns or malicious indicators
+
+If a threat is detected:
+
+The link is blocked or
+
+A warning message is shown to the user
 
 🧪 Usage
 Browse the internet normally
 
-When a phishing link is detected, the extension will alert or block access
+When a phishing link is detected:
 
-Users can avoid malicious websites easily
+The extension will alert or block access
+
+Helps users avoid malicious websites
 
 🤝 Contributing
 Contributions are welcome!
 
 Fork the repository
 
-Improve detection logic
+Improve phishing detection logic
 
-Fix bugs or enhance UI
+Fix bugs or enhance the UI
 
 Submit a pull request
 
